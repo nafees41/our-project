@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap Navbar with Social Media Icons</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Raleway">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background: #eeeeee;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        .form-inline {
+            display: inline-block;
+        }
+
+        .navbar-header.col {
+            padding: 0 !important;
+        }
+
+        .navbar {
+            background: #fff;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-bottom: 1px solid #d6d6d6;
+            box-shadow: white;
+        }
+
+        .nav-link {
+            margin: 0 5px;
+        }
+
+        .nav-link img {
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            margin: -8px 0;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .navbar .navbar-brand {
+            color: white;
+            padding-left: 0;
+            font-size: 20px;
+            padding-right: 50px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .navbar .navbar-brand b {
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar .navbar-nav a:hover,
+        .navbar .navbar-nav a:focus {
+            color: white !important;
+        }
+
+        .navbar .navbar-nav a.active,
+        .navbar .navbar-nav a.active:hover {
+            color: white !important;
+            background: transparent !important;
+        }
+
+        .navbar .nav-item i {
+            font-size: 18px;
+        }
+
+        .navbar .nav-item.show>a {
+            background: none !important;
+        }
+
+
+
+
+        }
+
+        .form-inline {
+            display: inline-block;
+        }
+
+        .navbar-header.col {
+            padding: 0 !important;
+        }
+
+        .navbar {
+            background: #fff;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-bottom: 1px solid #d6d6d6;
+            box-shadow: white;
+        }
+
+        .nav-link {
+            margin: 0 5px;
+        }
+
+        .nav-link img {
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            margin: -8px 0;
+            float: right;
+            margin-right: 10px;
+        }
+
+        .navbar .navbar-brand {
+            color: white;
+            padding-left: 0;
+            font-size: 20px;
+            padding-right: 50px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .navbar .navbar-brand b {
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar .navbar-nav a:hover,
+        .navbar .navbar-nav a:focus {
+            color: white !important;
+        }
+
+        .navbar .navbar-nav a.active,
+        .navbar .navbar-nav a.active:hover {
+            color: white !important;
+            background: transparent !important;
+        }
+
+        .navbar .nav-item i {
+            font-size: 18px;
+        }
+
+        .navbar .nav-item.show>a {
+            background: none !important;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the search field */
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            background: #f1f1f1;
+        }
+
+        /* Style the submit button */
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: green;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            /* Prevent double borders */
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            background: #0b7dda;
+        }
+
+        /* Clear floats */
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+    p {
+        text-align: center;
+        font-size: 51px;
+        color: white;
+    }
+    h1 {
+    height: auto;
+    font-family: sans-serif;
+    font-weight: normal;
+    letter-spacing: 200px 0 100px;
+    align-items: center;
+    text-align: center;
+
+  }
+  .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .responsive {
+    width: 100%;
+  }
+}
+    
+    
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+.data{
+    text-align: center;
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="
+    background: black;">
+        <a class="navbar-brand" href="#">foodhub@gmail.com</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+            <div class="navbar-nav">
+            </div>
+        </div>
+        <div class="navbar-nav ml-auto">
+            <div class="navbar-form-wrapper">
+                <form class="navbar-form form-inline">
+                    </span>
+            </div>
+        </div>
+        </form>
+        </div>
+        <a href="#" class="nav-item nav-link"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="nav-item nav-link"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="nav-item nav-link"><i class="fa fa-google-plus"></i></a>
+        <a href="#" class="nav-item nav-link"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light" style="
+    background: green;">
+        <a class="navbar-brand" href="#">FOOD<b>HUB</b></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start" style="margin-left: 387px;">
+            <div class="navbar-nav">
+                <a href="#" class="nav-item nav-link" style="
+        color: white; font-size: 22px;">Home</a>
+                <a href="#" class="nav-item nav-link" style=" color: white;font-size: 22px">About</a>
+                <a href="#" class="nav-item nav-link" style="
+            color: white;font-size: 22px">Login</a>
+            </div>
+            <a href="#" class="nav-item nav-link" style="color: white;font-size: 22px">services</a>
+            <a href="#" class="nav-item nav-link" style="
+            color: white;font-size: 22px">About Us</a>
+            <a href="#" class="nav-item nav-link" style="
+              color: white;font-size: 22px">contact us</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+            <div class="navbar-form-wrapper">
+                <form class="navbar-form form-inline">
+                    </span>
+            </div>
+        </div>
+        </form>
+        </div>
+
+        </div>
+        </div>
+    </nav>
+
+        <img src="back.jpg" alt="Snow" style="width:100%;"  height="440px">
+        <div class="centered">
+            <p>Order Delicious food online</p>
+    <form class="example" action="action_page.php">
+        <input type="text" placeholder="resturant name or address" name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    </div>
+    <h1>choose one to start building your order</h1>
+   <div class="data">
+    <img id="myImg" src="images (1).jpg" alt="Northern Lights, Norway" width="300" height="200">
+    <img id="myImg" src="images (2).jpg" alt="Northern Lights, Norway" width="300" height="200">
+    <img id="myImg" src="images.jpg" alt="Northern Lights, Norway" width="300" height="200">
+</div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+    
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+    </script>
+    
+</body>
+
+</html>
